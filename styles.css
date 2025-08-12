@@ -1,0 +1,368 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sailec', sans-serif;
+    line-height: 1.6;
+    color: #e1f3fd;
+    background-color: #041d25;
+    overflow-x: hidden;
+}
+
+/* Main Container */
+.home-container {
+    background-color: #041d25;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.body-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Fixed Navigation Sidebar */
+.nav-sidebar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 40px 40px 40px 150px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100vh;
+    background-color: #041d25;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    color: #e1f3fd;
+    text-align: left;
+    letter-spacing: 0.24px;
+    margin: 0;
+}
+
+.nav-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.section-title {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #1e6075;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-bottom: 24px;
+}
+
+.nav-links a {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #e1f3fd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3daed1;
+}
+
+/* Scrollable Main Content */
+.main-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 121px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 100px 150px 120px 80px;
+    position: relative;
+    margin-left: 20%;
+    width: 80%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 100px;
+    padding-right: 150px;
+}
+
+.profile-image-container {
+    display: flex;
+    height: 0;
+    align-items: center;
+    padding-left: 40px;
+    padding-bottom: 60px;
+    justify-content: center;
+    position: relative;
+    width: 0;
+}
+
+.profile-image {
+    transform: rotate(343.473deg);
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100.682px;
+    width: 104.365px;
+    border-radius: 10px;
+    border: 2px solid #1e6075;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.3), 0px 1px 3px 1px rgba(0,0,0,0.15);
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 800px;
+}
+
+.greeting {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    color: #e1f3fd;
+    text-align: left;
+    letter-spacing: 0.24px;
+    margin: 0;
+    width: 100%;
+}
+
+.bio {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #e1f3fd;
+    text-align: left;
+    letter-spacing: 0.16px;
+    margin: 0;
+    width: 100%;
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    gap: -20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+
+.section-heading h3 {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #3daed1;
+    text-align: left;
+    letter-spacing: 0.16px;
+    margin: 0;
+}
+
+.underline {
+    height: 0;
+    width: 847px;
+    max-width: 100%;
+    position: relative;
+}
+
+.underline img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: -1px;
+    width: 100%;
+    height: 100%;
+}
+
+.values-list {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #e1f3fd;
+    text-align: left;
+    letter-spacing: 0.16px;
+    margin: 0;
+    width: 100%;
+}
+
+.values-list ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none !important;
+}
+
+.values-list li {
+    margin-bottom: 16px;
+    line-height: 27.2px;
+    list-style: none !important;
+}
+
+.values-list li {
+    margin-bottom: 16px;
+    line-height: 27.2px;
+}
+
+.values-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: #1e6075;
+    margin: 0px 0 10px 0;
+    opacity: 0.1;
+}
+
+/* Custom Scrollbar for Main Content */
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #0a2a32;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #1e6075;
+    border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #3daed1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .body-wrapper {
+        width: 100%;
+    }
+    
+    .nav-sidebar {
+        width: 20%;
+        padding: 40px 30px 40px 100px;
+    }
+    
+    .main-content {
+        margin-left: 20%;
+        width: 80%;
+        padding: 100px 100px 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .body-wrapper {
+        flex-direction: column;
+    }
+    
+    .nav-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        gap: 30px;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 40px 20px;
+        gap: 60px;
+    }
+    
+    .profile-image-container {
+        display: none;
+    }
+    
+    .underline {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-sidebar {
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    .main-content {
+        padding: 30px 15px;
+        gap: 40px;
+    }
+    
+    .greeting {
+        font-size: 20px;
+    }
+    
+    .bio, .section-heading h3, .nav-links a, .section-title {
+        font-size: 14px;
+        line-height: 24px;
+    }
+} 
