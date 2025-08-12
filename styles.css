@@ -72,6 +72,16 @@ body {
     margin: 0;
 }
 
+.logo h1 a {
+    color: #e1f3fd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo h1 a:hover {
+    color: #3daed1;
+}
+
 .nav-section {
     display: flex;
     flex-direction: column;
@@ -365,4 +375,179 @@ body {
         font-size: 14px;
         line-height: 24px;
     }
+}
+
+/* ChipperCash Page Styles */
+.work-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.project-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.project-title {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30.6px;
+    color: #e1f3fd;
+    letter-spacing: 0.18px;
+    margin: 0;
+}
+
+.project-period {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #1e6075;
+    letter-spacing: 0.16px;
+}
+
+.project-description {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #e1f3fd;
+    letter-spacing: 0.16px;
+    margin: 0;
+    width: 100%;
+    max-width: 842px;
+}
+
+.project-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.project-heading h3 {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #3daed1;
+    letter-spacing: 0.16px;
+    margin: 0;
+}
+
+.project-image {
+    width: 100%;
+    height: 522px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-image {
+    background-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 434px;
+}
+
+.placeholder-content {
+    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.project-text {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #e1f3fd;
+    letter-spacing: 0.16px;
+    width: 100%;
+    max-width: 847px;
+}
+
+.project-text p {
+    margin: 0 0 16px 0;
+}
+
+.project-text p:last-child {
+    margin-bottom: 0;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.link-text {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    color: #72d5f9;
+    text-decoration: underline;
+    letter-spacing: 0.16px;
+    text-underline-skip-ink: none;
+    text-underline-position: from-font;
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Navigation Active State */
+.nav-active {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-active-indicator {
+    width: 23px;
+    height: 23px;
+    transform: rotate(90deg);
+}
+
+.nav-active-indicator img {
+    width: 100%;
+    height: 100%;
+}
+
+.active-link {
+    font-family: 'Sailec', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.2px;
+    color: #72d5f9 !important;
+    text-decoration: none;
+    letter-spacing: 0.16px;
 } 
