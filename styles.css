@@ -413,6 +413,7 @@ body {
         width: 100%;
         padding: 40px 20px;
         gap: 60px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .about-section {
@@ -451,6 +452,7 @@ body {
     
     .project-title {
         font-size: 20px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .project-image {
@@ -463,14 +465,17 @@ body {
     
     .content-text {
         max-width: 100%;
+        font-family: 'Sailec', sans-serif;
     }
     
     .project-description {
         max-width: 100%;
+        font-family: 'Sailec', sans-serif;
     }
     
     .project-text {
         max-width: 100%;
+        font-family: 'Sailec', sans-serif;
     }
 }
 
@@ -483,6 +488,7 @@ body {
     .main-content {
         padding: 30px 15px;
         gap: 40px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .about-section {
@@ -491,15 +497,18 @@ body {
     
     .greeting {
         font-size: 18px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .project-title {
         font-size: 18px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .bio, .section-heading h3, .nav-links a, .section-title, .project-description, .project-text {
         font-size: 14px;
         line-height: 22px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .work-section {
@@ -529,6 +538,7 @@ body {
     
     .logo h1 {
         font-size: 20px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .nav-section {
@@ -544,6 +554,7 @@ body {
     .main-content {
         padding: 20px 10px;
         gap: 30px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .nav-sidebar {
@@ -553,15 +564,18 @@ body {
     
     .greeting {
         font-size: 16px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .project-title {
         font-size: 16px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .bio, .section-heading h3, .nav-links a, .section-title, .project-description, .project-text {
         font-size: 13px;
         line-height: 20px;
+        font-family: 'Sailec', sans-serif;
     }
     
     .work-section {
@@ -855,6 +869,11 @@ body {
 
 /* Mobile Menu Styles */
 @media (max-width: 768px) {
+    /* Ensure Sailec font is applied to all mobile elements */
+    * {
+        font-family: 'Sailec', sans-serif;
+    }
+    
     .mobile-menu-toggle {
         display: block; /* Hidden by default, shown only on mobile/tablet */
         position: fixed;
@@ -923,11 +942,13 @@ body {
     }
 
     .mobile-nav-header h1 {
+        font-family: 'Sailec', sans-serif;
         font-size: 24px;
         margin: 0;
     }
 
     .mobile-nav-header h1 a {
+        font-family: 'Sailec', sans-serif;
         color: #e1f3fd;
         text-decoration: none;
     }
@@ -936,6 +957,7 @@ body {
         background: none;
         border: none;
         color: #e1f3fd;
+        font-family: 'Sailec', sans-serif;
         font-size: 32px;
         cursor: pointer;
         padding: 0;
@@ -959,6 +981,7 @@ body {
     }
 
     .mobile-nav-section h3 {
+        font-family: 'Sailec', sans-serif;
         color: #1e6075;
         font-size: 16px;
         font-weight: 700;
@@ -978,6 +1001,7 @@ body {
     }
 
     .mobile-nav-section a {
+        font-family: 'Sailec', sans-serif;
         color: #e1f3fd;
         text-decoration: none;
         font-size: 18px;
