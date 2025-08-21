@@ -84,4 +84,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Set active navigation on page load
     setActiveNavigation();
-}); 
+    
+    // Image Modal Functionality
+    setupImageModal();
+});
+
+// Image Modal Functions
+function setupImageModal() {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    
+    // Get all images that should be clickable
+    const clickableImages = document.querySelectorAll('.project-image img, .placeholder-image img, .profile-image img, img[src*="assets/"]');
+    
+    // Add click event to each image
+    clickableImages.forEach(img => {
+        img.addEventListener('click', function() {
+            openImageModal(this.src, this.alt);
+        });
+    });
+    
+    // Close modal when clicking on modal content (image)
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal || e.target.classList.contains('image-modal-close')) {
+            closeImageModal();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeImageModal();
+        }
+    });
+}
+
+function openImageModal(imageSrc, imageAlt) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    
+    modalImg.src = imageSrc;
+    modalImg.alt = imageAlt;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+} 
