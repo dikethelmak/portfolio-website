@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Sailec', sans-serif;
 }
 
 html {
@@ -15,6 +16,33 @@ body {
     color: #e1f3fd;
     background-color: #041d25;
     overflow-x: hidden;
+}
+
+/* Ensure Sailec font is applied to all elements */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, button, input, textarea, select, label {
+    font-family: 'Sailec', sans-serif !important;
+}
+
+/* Font fallback and consistency */
+@font-face {
+    font-family: 'Sailec';
+    src: local('Sailec'), local('Sailec-Regular'), local('Sailec-Bold');
+    font-display: swap;
+}
+
+/* Additional font consistency rules */
+.nav-sidebar, .main-content, .project-block, .project-content, .project-text, .project-description, .project-title, .greeting, .bio, .section-heading h3, .nav-links a, .section-title, .case-studies-note, .case-studies-email {
+    font-family: 'Sailec', sans-serif !important;
+}
+
+/* Universal font inheritance */
+* {
+    font-family: inherit;
+}
+
+/* Ensure all text elements use Sailec */
+p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, label {
+    font-family: 'Sailec', sans-serif !important;
 }
 
 /* Main Container */
@@ -339,6 +367,11 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
+    /* Ensure Sailec font is applied to all elements */
+    * {
+        font-family: 'Sailec', sans-serif !important;
+    }
+    
     .body-wrapper {
         width: 100%;
     }
@@ -381,6 +414,11 @@ body {
 }
 
 @media (max-width: 1024px) {
+    /* Ensure Sailec font is applied to all elements */
+    * {
+        font-family: 'Sailec', sans-serif !important;
+    }
+    
     .nav-sidebar {
         width: 25%;
         padding: 30px 20px 30px 60px;
@@ -505,6 +543,11 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* Ensure Sailec font is applied to all elements */
+    * {
+        font-family: 'Sailec', sans-serif !important;
+    }
+    
     .nav-sidebar {
         padding: 15px;
         gap: 20px;
@@ -579,6 +622,11 @@ body {
 }
 
 @media (max-width: 360px) {
+    /* Ensure Sailec font is applied to all elements */
+    * {
+        font-family: 'Sailec', sans-serif !important;
+    }
+    
     .main-content {
         padding: 20px 10px;
         gap: 30px;
@@ -902,7 +950,12 @@ body {
 @media (max-width: 768px) {
     /* Ensure Sailec font is applied to all mobile elements */
     * {
-        font-family: 'Sailec', sans-serif;
+        font-family: 'Sailec', sans-serif !important;
+    }
+    
+    /* Additional font consistency for mobile */
+    html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, button, input, textarea, select, label {
+        font-family: 'Sailec', sans-serif !important;
     }
     
     .mobile-menu-toggle {
