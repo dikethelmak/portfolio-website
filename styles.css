@@ -26,6 +26,31 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, button, input, 
 /* Font fallback and consistency */
 @font-face {
     font-family: 'Sailec';
+    src: url('../fonts/SailecRegular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('../fonts/SailecRegular.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('../fonts/SailecRegular.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Fallback fonts for better compatibility */
+@font-face {
+    font-family: 'Sailec';
     src: local('Sailec'), local('Sailec-Regular'), local('Sailec-Bold');
     font-display: swap;
 }
