@@ -35,6 +35,14 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, li, ul, ol, button, input, 
 @font-face {
     font-family: 'Sailec';
     src: url('../fonts/SailecRegular.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('../fonts/SailecRegular.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -183,7 +191,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, la
 .case-studies-email {
     color: #72d5f9;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -405,6 +413,22 @@ p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, la
         padding: 80px 80px 40px 60px;
     }
     
+    .greeting {
+        font-size: 24px;
+        font-family: 'Sailec', sans-serif;
+    }
+    
+    .project-title {
+        font-size: 24px;
+        font-family: 'Sailec', sans-serif;
+    }
+    
+    .bio, .section-heading h3, .nav-links a, .section-title, .project-description, .project-text {
+        font-size: 16px;
+        line-height: 27.2px;
+        font-family: 'Sailec', sans-serif;
+    }
+    
     .content-text {
         max-width: 700px;
     }
@@ -424,6 +448,20 @@ p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, la
     
     .work-section .divider {
         max-width: 700px;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 100%;
+        height: 600px;
+        border-radius: 10px;
+    }
+    
+    .placeholder-image {
+        width: 100%;
+        max-width: 100%;
+        height: 580px;
+        border-radius: 10px;
     }
 
     .mobile-menu-toggle {
@@ -456,6 +494,22 @@ p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, la
         padding: 60px 60px 40px 40px;
     }
     
+    .greeting {
+        font-size: 24px;
+        font-family: 'Sailec', sans-serif;
+    }
+    
+    .project-title {
+        font-size: 24px;
+        font-family: 'Sailec', sans-serif;
+    }
+    
+    .bio, .section-heading h3, .nav-links a, .section-title, .project-description, .project-text {
+        font-size: 16px;
+        line-height: 27.2px;
+        font-family: 'Sailec', sans-serif;
+    }
+    
     .content-text {
         max-width: 600px;
     }
@@ -474,6 +528,20 @@ p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, la
     
     .work-section .divider {
         max-width: 600px;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 100%;
+        height: 520px;
+        border-radius: 10px;
+    }
+    
+    .placeholder-image {
+        width: 100%;
+        max-width: 100%;
+        height: 500px;
+        border-radius: 10px;
     }
 
     .mobile-menu-toggle {
@@ -536,8 +604,19 @@ p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, la
         gap: 10px;
     }
     
+    .greeting {
+        font-size: 24px;
+        font-family: 'Sailec', sans-serif;
+    }
+    
     .project-title {
         font-size: 20px;
+        font-family: 'Sailec', sans-serif;
+    }
+    
+    .bio, .section-heading h3, .nav-links a, .section-title, .project-description, .project-text {
+        font-size: 16px;
+        line-height: 27.2px;
         font-family: 'Sailec', sans-serif;
     }
     
@@ -590,12 +669,12 @@ p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, la
     }
     
     .greeting {
-        font-size: 18px;
+        font-size: 20px;
         font-family: 'Sailec', sans-serif;
     }
     
     .project-title {
-        font-size: 18px;
+        font-size: 20px;
         font-family: 'Sailec', sans-serif;
     }
     
@@ -665,12 +744,12 @@ p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, la
     }
     
     .greeting {
-        font-size: 16px;
+        font-size: 18px;
         font-family: 'Sailec', sans-serif;
     }
     
     .project-title {
-        font-size: 16px;
+        font-size: 18px;
         font-family: 'Sailec', sans-serif;
     }
     
@@ -835,7 +914,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, la
 
 .link-text {
     font-family: 'Sailec', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1;
     color: #72d5f9;
@@ -851,7 +930,7 @@ p, h1, h2, h3, h4, h5, h6, span, div, a, li, button, input, textarea, select, la
 /* Billions link styling to match link-text */
 .billions-link {
     font-family: 'Sailec', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1;
     color: #72d5f9;
