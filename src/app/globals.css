@@ -1,26 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Sailec';
+  src: url('/fonts/SailecRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: 'Sailec';
+  src: url('/fonts/SailecRegular.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'SailecBold';
+  src: url('/fonts/SailecBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-bg: #041d25;
+  --color-surface: #0d2535;
+  --color-text: #e1f3fd;
+  --color-muted: #4d95af;
+  --color-accent: #3daed1;
+  --color-bright: #72d5f9;
+  --font-sailec: 'Sailec', sans-serif;
+  --font-sailec-bold: 'SailecBold', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Sailec', sans-serif;
+  line-height: 1.6;
+  color: #e1f3fd;
+  background-color: #041d25;
+  overflow-x: hidden;
+}
+
+body.nav-open,
+body.modal-open {
+  overflow: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid #72d5f9;
+  outline-offset: 3px;
+  border-radius: 2px;
 }
