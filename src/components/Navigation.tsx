@@ -400,7 +400,7 @@ export default function Navigation() {
         <button
           onClick={() => setMobileOpen(o => !o)}
           className="w-9 h-9 rounded-xl flex items-center justify-center hover:opacity-90 transition-all duration-150"
-          style={{ background: '#1a4fc4' }}
+          style={{ background: '#4d95af' }}
           aria-label="Open menu"
         >
           <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
