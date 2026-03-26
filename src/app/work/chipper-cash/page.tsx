@@ -153,18 +153,30 @@ export default function ChipperCashPage() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-6 mt-10 mb-4">
-        <ProjectImage src="/assets/Chipper Merchant1.png" alt="Chipper Merchant Dashboard" />
-      </div>
-
       <PullQuote>
         $9B+ in API-driven transactions.
       </PullQuote>
 
-      <div className="flex flex-col gap-6 mt-6 mb-4">
-        <ProjectImage src="/assets/Chipper Merchant2.png" alt="Chipper Merchant Dashboard" />
-        <ProjectImage src="/assets/Chipper Merchant3.png" alt="Chipper Merchant Dashboard" />
+      <div className="mt-6 mb-3">
+        <ProjectImage src="/assets/Chipper Merchant3.png" alt="Payments list" />
       </div>
+      <p className="text-[11px] uppercase tracking-[0.14em] text-muted/50 font-[SailecBold] mb-6">
+        Payments list
+      </p>
+
+      <div className="mt-6 mb-3">
+        <ProjectImage src="/assets/Chipper Merchant1.png" alt="Payment details" />
+      </div>
+      <p className="text-[11px] uppercase tracking-[0.14em] text-muted/50 font-[SailecBold] mb-6">
+        Payment details
+      </p>
+
+      <div className="mt-6 mb-3">
+        <ProjectImage src="/assets/Chipper Merchant2.png" alt="API keys generated" />
+      </div>
+      <p className="text-[11px] uppercase tracking-[0.14em] text-muted/50 font-[SailecBold] mb-6">
+        API keys generated
+      </p>
 
       {/* USD Virtual Accounts */}
       <h3 className="text-[17px] font-[SailecBold] text-text mb-6 pt-10">
