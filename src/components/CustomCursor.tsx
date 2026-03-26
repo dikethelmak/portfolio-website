@@ -22,11 +22,11 @@ export default function CustomCursor() {
 
     function onMove(e: MouseEvent) {
       mouse.current = { x: e.clientX, y: e.clientY }
-      cursor.style.left = e.clientX + 'px'
-      cursor.style.top = e.clientY + 'px'
+      cursor!.style.left = e.clientX + 'px'
+      cursor!.style.top = e.clientY + 'px'
     }
-    function onLeave() { cursor.style.opacity = '0' }
-    function onEnter() { cursor.style.opacity = '1' }
+    function onLeave() { cursor!.style.opacity = '0' }
+    function onEnter() { cursor!.style.opacity = '1' }
 
     document.addEventListener('mousemove', onMove)
     document.addEventListener('mouseleave', onLeave)
