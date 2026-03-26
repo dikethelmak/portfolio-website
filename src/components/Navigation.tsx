@@ -430,7 +430,7 @@ export default function Navigation() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 8 }}
               transition={{ duration: 0.18, ease: 'easeOut' }}
-              className="fixed bottom-[72px] left-4 z-[60] md:hidden rounded-2xl overflow-hidden w-[260px]"
+              className="fixed bottom-[72px] right-4 z-[60] md:hidden rounded-2xl overflow-hidden w-[260px]"
               style={{
                 background: 'rgba(13, 37, 53, 0.97)',
                 backdropFilter: 'blur(20px)',
