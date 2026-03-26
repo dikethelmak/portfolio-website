@@ -94,14 +94,16 @@ export default function HeroSection() {
         className="flex flex-col gap-4 text-[15px] text-muted leading-[1.75] max-w-3xl mb-10"
       >
         <p>
-          I&apos;m Thelma, a product designer with 8 years of experience.
-          I&apos;ve shipped control surfaces for air-gapped 5G infrastructure,
-          ML trust UX for Apple&apos;s battery R&amp;D, and financial tooling
-          processing $9B+ across 4 African markets. I enjoy working on complex,
-          regulated systems that enables people get work done efficiently.
+          I&apos;m Thelma, a product designer with 8 years of experience. I specialise in
+          complex, regulated systems that help expert users move fast without breaking things.
         </p>
         <p>
-          I&apos;m currently building{' '}
+          I&apos;ve shipped RBAC and multi-tenancy controls for air-gapped 5G infrastructure,
+          ML trust UX for Apple&apos;s battery R&amp;D, and financial tooling processing $9B+
+          across 4 African markets.
+        </p>
+        <p>
+          Outside my role at ChipperCash, I&apos;m building{' '}
           <span className="relative inline-block group/tooltip">
             <a
               href="https://verifyskn.vercel.app"
@@ -117,7 +119,8 @@ export default function HeroSection() {
               An AI-powered skincare authentication app — designed and coded by me, using Claude Code and a Next.js/Supabase stack.
             </span>
           </span>
-          {' '}— independently taking a product from idea to working system.
+          {' '}— independently taking a product from idea to working system across design,
+          code, and architecture.
         </p>
       </motion.div>
 
