@@ -412,64 +412,65 @@ export default function Navigation() {
 
             {/* Panel */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.96, y: -8 }}
+              initial={{ opacity: 0, scale: 0.95, y: -6 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96, y: -8 }}
-              transition={{ duration: 0.2, ease: 'easeOut' }}
-              className="fixed top-4 left-4 right-4 z-[60] md:hidden rounded-2xl overflow-hidden"
+              exit={{ opacity: 0, scale: 0.95, y: -6 }}
+              transition={{ duration: 0.18, ease: 'easeOut' }}
+              className="fixed top-4 left-4 z-[60] md:hidden rounded-2xl overflow-hidden w-[260px]"
               style={{
-                background: 'rgba(14, 16, 18, 0.97)',
-                backdropFilter: 'blur(24px)',
-                border: '1px solid rgba(255,255,255,0.06)',
+                background: 'rgba(13, 37, 53, 0.97)',
+                backdropFilter: 'blur(20px)',
+                border: '1px solid rgba(255,255,255,0.08)',
               }}
             >
               {/* Close row */}
               <button
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-2 w-full px-6 pt-5 pb-4 text-[11px] uppercase tracking-[0.18em] text-muted/60 font-[SailecBold] hover:text-muted transition-colors"
+                className="flex items-center w-full px-5 pt-4 pb-3 text-[10px] uppercase tracking-[0.18em] text-muted/50 font-[SailecBold] hover:text-muted transition-colors"
               >
                 Close
               </button>
-              <div className="h-px bg-white/[0.06] mx-6" />
+              <div className="h-px bg-white/[0.06] mx-5 mb-1" />
 
               {/* Nav links */}
-              <div className="px-6 py-3">
-                <Link
-                  href="/"
-                  onClick={() => setMobileOpen(false)}
-                  className={`block py-3.5 text-[26px] font-[SailecBold] leading-none transition-colors ${pathname === '/' ? 'text-accent' : 'text-text hover:text-accent'}`}
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  onClick={() => setMobileOpen(false)}
-                  className={`block py-3.5 text-[26px] font-[SailecBold] leading-none transition-colors ${pathname === '/about' ? 'text-accent' : 'text-text hover:text-accent'}`}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/talks"
-                  onClick={() => setMobileOpen(false)}
-                  className={`block py-3.5 text-[26px] font-[SailecBold] leading-none transition-colors ${pathname === '/talks' ? 'text-accent' : 'text-text hover:text-accent'}`}
-                >
-                  Talks
-                </Link>
+              <div className="px-2 pb-3">
+                {[
+                  { href: '/', label: 'Home' },
+                  { href: '/about', label: 'About' },
+                  { href: '/talks', label: 'Talks' },
+                ].map(({ href, label }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`flex items-center px-3 py-2.5 rounded-lg text-[15px] transition-colors ${
+                      pathname === href
+                        ? 'text-accent bg-white/[0.06]'
+                        : 'text-text/80 hover:text-text hover:bg-white/[0.04]'
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                ))}
 
-                <div className="h-px bg-white/[0.06] my-3" />
+                <div className="h-px bg-white/[0.06] mx-3 my-2" />
 
                 {caseStudies.map(({ href, label }) => (
                   <Link
                     key={href}
                     href={href}
                     onClick={() => setMobileOpen(false)}
-                    className={`block py-3 text-[20px] font-[SailecBold] leading-none transition-colors ${pathname === href ? 'text-accent' : 'text-text/70 hover:text-accent'}`}
+                    className={`flex items-center px-3 py-2.5 rounded-lg text-[15px] transition-colors ${
+                      pathname === href
+                        ? 'text-accent bg-white/[0.06]'
+                        : 'text-text/60 hover:text-text hover:bg-white/[0.04]'
+                    }`}
                   >
                     {label}
                   </Link>
                 ))}
 
-                <div className="h-px bg-white/[0.06] my-3" />
+                <div className="h-px bg-white/[0.06] mx-3 my-2" />
 
                 {workWithMeLinks.map(({ href, label }) => (
                   <a
@@ -478,20 +479,18 @@ export default function Navigation() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setMobileOpen(false)}
-                    className="block py-3 text-[20px] font-[SailecBold] leading-none text-text/70 hover:text-accent transition-colors"
+                    className="flex items-center px-3 py-2.5 rounded-lg text-[15px] text-text/60 hover:text-text hover:bg-white/[0.04] transition-colors"
                   >
                     {label}
                   </a>
                 ))}
                 <button
                   onClick={() => { copyEmail(); setMobileOpen(false) }}
-                  className="block py-3 text-[20px] font-[SailecBold] leading-none text-text/70 hover:text-accent transition-colors text-left w-full"
+                  className="flex items-center w-full px-3 py-2.5 rounded-lg text-[15px] text-text/60 hover:text-text hover:bg-white/[0.04] transition-colors"
                 >
                   {emailCopied ? 'Copied!' : 'Email'}
                 </button>
               </div>
-
-              <div className="pb-5" />
             </motion.div>
           </>
         )}
