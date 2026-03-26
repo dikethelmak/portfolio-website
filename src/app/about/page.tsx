@@ -68,7 +68,7 @@ export default function AboutPage() {
         <div>
           <p className="text-[11px] uppercase tracking-[0.14em] text-accent font-[SailecBold] mb-3 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse inline-block" />
-            Available for senior roles · UK
+            Available for senior roles · UK/Europe
           </p>
           <h1 className="text-[24px] sm:text-[30px] font-[SailecBold] text-text leading-tight mb-2">
             Thelma Dike
@@ -100,7 +100,7 @@ export default function AboutPage() {
           <p>
             I care deeply about how products feel in the hands of expert users — the people who
             live in these tools all day. A wrong click shouldn&apos;t have consequences. I&apos;m
-            currently based in Lagos and actively targeting senior roles in the UK deep-tech and AI
+            currently based in Lagos and actively targeting senior roles in the UK/Europe deep-tech and AI
             space.
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function AboutPage() {
           Status
         </p>
         <div className="flex flex-col gap-2">
-          <p className="text-[15px] font-[SailecBold] text-text">Lagos → London</p>
+          <p className="text-[15px] font-[SailecBold] text-text">Lagos → UK/Europe</p>
           <p className="text-[14px] text-muted leading-relaxed">
             Tech Nation Global Talent endorsement in progress, open to sponsorships.
           </p>

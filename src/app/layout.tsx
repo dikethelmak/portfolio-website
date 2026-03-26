@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import SiteFooter from '@/components/SiteFooter'
 import { ImageModalProvider } from '@/components/ImageModal'
+import CustomCursor from '@/components/CustomCursor'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
+        <CustomCursor />
         <ImageModalProvider>
           <div className="min-h-screen flex flex-col">
             <Navigation />

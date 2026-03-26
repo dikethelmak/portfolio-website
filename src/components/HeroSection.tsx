@@ -1,6 +1,58 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+
+const words = ['Designer.', 'Builder.', 'Operator.']
+
+const TYPE_SPEED = 80
+const ERASE_SPEED = 45
+const PAUSE_AFTER_TYPE = 1400
+const PAUSE_AFTER_ERASE = 320
+
+function TypewriterHeading() {
+  const [displayed, setDisplayed] = useState('')
+  const [wordIndex, setWordIndex] = useState(0)
+  const [phase, setPhase] = useState<'typing' | 'paused' | 'erasing' | 'between'>('typing')
+
+  useEffect(() => {
+    const word = words[wordIndex]
+
+    if (phase === 'typing') {
+      if (displayed.length < word.length) {
+        const t = setTimeout(() => setDisplayed(word.slice(0, displayed.length + 1)), TYPE_SPEED)
+        return () => clearTimeout(t)
+      } else {
+        const t = setTimeout(() => setPhase('paused'), PAUSE_AFTER_TYPE)
+        return () => clearTimeout(t)
+      }
+    }
+
+    if (phase === 'paused') {
+      setPhase('erasing')
+    }
+
+    if (phase === 'erasing') {
+      if (displayed.length > 0) {
+        const t = setTimeout(() => setDisplayed(d => d.slice(0, -1)), ERASE_SPEED)
+        return () => clearTimeout(t)
+      } else {
+        const t = setTimeout(() => {
+          setWordIndex(i => (i + 1) % words.length)
+          setPhase('typing')
+        }, PAUSE_AFTER_ERASE)
+        return () => clearTimeout(t)
+      }
+    }
+  }, [displayed, phase, wordIndex])
+
+  return (
+    <h1 className="text-[24px] sm:text-[30px] font-[SailecBold] text-text leading-[1.25] mb-8">
+      {displayed}
+      <span className="inline-block w-[2px] h-[1.1em] bg-accent align-middle ml-0.5 animate-pulse" />
+    </h1>
+  )
+}
 
 const stats = [
   { value: '$9B+', label: 'transactions shipped' },
@@ -17,14 +69,22 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex items-center gap-2.5 mb-5"
+        className="flex items-center gap-2.5 mb-6"
       >
         <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
         <span className="text-[11px] uppercase tracking-[0.14em] text-accent font-[SailecBold]">
-          Open to senior roles · Relocating to UK
+          Open to senior roles · Relocating to UK/Europe
         </span>
       </motion.div>
 
+      {/* Typewriter heading */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        <TypewriterHeading />
+      </motion.div>
 
       {/* Descriptor */}
       <motion.div
