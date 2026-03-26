@@ -100,7 +100,7 @@ export default function Navigation() {
         ref={navRef}
         className="hidden md:flex fixed bottom-6 left-1/2 -translate-x-1/2 z-50 items-center gap-0.5 px-2 py-2 rounded-full shadow-2xl"
         style={{
-          background: 'rgba(13, 37, 53, 0.75)',
+          background: 'rgba(6, 10, 14, 0.75)',
           backdropFilter: 'blur(20px)',
           border: '1px solid rgba(255,255,255,0.08)',
         }}
@@ -153,7 +153,7 @@ export default function Navigation() {
                 transition={{ duration: 0.15, ease: 'easeOut' }}
                 className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 min-w-[180px] rounded-2xl py-2 shadow-2xl overflow-hidden"
                 style={{
-                  background: 'rgba(13, 37, 53, 0.97)',
+                  background: 'rgba(6, 10, 14, 0.97)',
                   backdropFilter: 'blur(20px)',
                   border: '1px solid rgba(255,255,255,0.08)',
                 }}
@@ -232,7 +232,7 @@ export default function Navigation() {
                 transition={{ duration: 0.15, ease: 'easeOut' }}
                 className="absolute bottom-full right-0 mb-3 min-w-[160px] rounded-2xl py-2 shadow-2xl overflow-hidden"
                 style={{
-                  background: 'rgba(13, 37, 53, 0.97)',
+                  background: 'rgba(6, 10, 14, 0.97)',
                   backdropFilter: 'blur(20px)',
                   border: '1px solid rgba(255,255,255,0.08)',
                 }}
@@ -313,7 +313,7 @@ export default function Navigation() {
                 transition={{ duration: 0.15, ease: 'easeOut' }}
                 className="absolute bottom-full right-0 mb-3 w-[200px] rounded-2xl overflow-hidden shadow-2xl"
                 style={{
-                  background: 'rgba(13, 37, 53, 0.97)',
+                  background: 'rgba(6, 10, 14, 0.97)',
                   backdropFilter: 'blur(20px)',
                   border: '1px solid rgba(255,255,255,0.08)',
                 }}
@@ -348,7 +348,7 @@ export default function Navigation() {
       <div
         className="md:hidden fixed bottom-4 left-4 right-4 z-50 flex items-center gap-3 px-3 py-2.5 rounded-2xl shadow-2xl"
         style={{
-          background: 'rgba(13, 37, 53, 0.92)',
+          background: 'rgba(6, 10, 14, 0.96)',
           backdropFilter: 'blur(24px)',
           border: '1px solid rgba(255,255,255,0.08)',
         }}
@@ -432,7 +432,7 @@ export default function Navigation() {
               transition={{ duration: 0.18, ease: 'easeOut' }}
               className="fixed top-4 left-4 z-[60] md:hidden rounded-2xl overflow-hidden w-[260px]"
               style={{
-                background: 'rgba(13, 37, 53, 0.97)',
+                background: 'rgba(6, 10, 14, 0.97)',
                 backdropFilter: 'blur(20px)',
                 border: '1px solid rgba(255,255,255,0.08)',
               }}
