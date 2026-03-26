@@ -396,62 +396,104 @@ export default function Navigation() {
         </button>
       </div>
 
-      {/* Mobile full menu overlay */}
+      {/* Mobile menu panel */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[60] bg-bg/95 backdrop-blur-sm md:hidden flex flex-col"
-            onClick={(e) => { if (e.target === e.currentTarget) setMobileOpen(false) }}
-          >
+          <>
+            {/* Backdrop */}
             <motion.div
-              initial={{ y: '100%' }}
-              animate={{ y: 0 }}
-              exit={{ y: '100%' }}
-              transition={{ type: 'tween', duration: 0.28 }}
-              className="absolute bottom-0 left-0 right-0 bg-surface rounded-t-3xl px-6 py-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-[59] md:hidden"
+              onClick={() => setMobileOpen(false)}
+            />
+
+            {/* Panel */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96, y: -8 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.96, y: -8 }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
+              className="fixed top-4 left-4 right-4 z-[60] md:hidden rounded-2xl overflow-hidden"
+              style={{
+                background: 'rgba(14, 16, 18, 0.97)',
+                backdropFilter: 'blur(24px)',
+                border: '1px solid rgba(255,255,255,0.06)',
+              }}
             >
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full overflow-hidden">
-                    <Image src="/assets/aboutme-main.png" alt="Thelma Dike" width={36} height={36} className="w-full h-full object-cover object-top" />
-                  </div>
-                  <span className="text-sm font-[SailecBold] text-text">Thelma Dike</span>
-                </div>
-                <button onClick={() => setMobileOpen(false)} className="w-9 h-9 rounded-xl flex items-center justify-center text-text/60 hover:text-text hover:bg-white/10 transition-all duration-150" aria-label="Close menu">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                  </svg>
-                </button>
-              </div>
+              {/* Close row */}
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-2 w-full px-6 pt-5 pb-4 text-[11px] uppercase tracking-[0.18em] text-muted/60 font-[SailecBold] hover:text-muted transition-colors"
+              >
+                Close
+              </button>
+              <div className="h-px bg-white/[0.06] mx-6" />
 
-              <div className="flex flex-col gap-1 mb-6">
-                <p className="text-[10px] uppercase tracking-widest text-muted font-[SailecBold] mb-2">Case Studies</p>
+              {/* Nav links */}
+              <div className="px-6 py-3">
+                <Link
+                  href="/"
+                  onClick={() => setMobileOpen(false)}
+                  className={`block py-3.5 text-[26px] font-[SailecBold] leading-none transition-colors ${pathname === '/' ? 'text-accent' : 'text-text hover:text-accent'}`}
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/about"
+                  onClick={() => setMobileOpen(false)}
+                  className={`block py-3.5 text-[26px] font-[SailecBold] leading-none transition-colors ${pathname === '/about' ? 'text-accent' : 'text-text hover:text-accent'}`}
+                >
+                  About
+                </Link>
+                <Link
+                  href="/talks"
+                  onClick={() => setMobileOpen(false)}
+                  className={`block py-3.5 text-[26px] font-[SailecBold] leading-none transition-colors ${pathname === '/talks' ? 'text-accent' : 'text-text hover:text-accent'}`}
+                >
+                  Talks
+                </Link>
+
+                <div className="h-px bg-white/[0.06] my-3" />
+
                 {caseStudies.map(({ href, label }) => (
-                  <Link key={href} href={href} onClick={() => setMobileOpen(false)} className={`py-2 text-base transition-colors ${pathname === href ? 'text-bright' : 'text-text hover:text-bright'}`}>{label}</Link>
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block py-3 text-[20px] font-[SailecBold] leading-none transition-colors ${pathname === href ? 'text-accent' : 'text-text/70 hover:text-accent'}`}
+                  >
+                    {label}
+                  </Link>
                 ))}
-              </div>
 
-              <div className="flex flex-col gap-1 mb-6">
-                <p className="text-[10px] uppercase tracking-widest text-muted font-[SailecBold] mb-2">Navigate</p>
-                <Link href="/about" onClick={() => setMobileOpen(false)} className="py-2 text-base text-text hover:text-bright transition-colors">About</Link>
-                <Link href="/talks" onClick={() => setMobileOpen(false)} className="py-2 text-base text-text hover:text-bright transition-colors">Talks</Link>
-              </div>
+                <div className="h-px bg-white/[0.06] my-3" />
 
-              <div className="flex flex-col gap-1">
-                <p className="text-[10px] uppercase tracking-widest text-muted font-[SailecBold] mb-2">Work with me</p>
                 {workWithMeLinks.map(({ href, label }) => (
-                  <a key={href} href={href} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="py-2 text-base text-text hover:text-bright transition-colors">{label}</a>
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-3 text-[20px] font-[SailecBold] leading-none text-text/70 hover:text-accent transition-colors"
+                  >
+                    {label}
+                  </a>
                 ))}
-                <button onClick={() => { copyEmail(); setMobileOpen(false) }} className="py-2 text-base text-text hover:text-bright transition-colors text-left">
+                <button
+                  onClick={() => { copyEmail(); setMobileOpen(false) }}
+                  className="block py-3 text-[20px] font-[SailecBold] leading-none text-text/70 hover:text-accent transition-colors text-left w-full"
+                >
                   {emailCopied ? 'Copied!' : 'Email'}
                 </button>
               </div>
+
+              <div className="pb-5" />
             </motion.div>
-          </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>
