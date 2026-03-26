@@ -374,25 +374,39 @@ export default function Navigation() {
         {/* Spacer */}
         <div className="flex-1" />
 
-        {/* Hamburger */}
+        {/* Vinyl / Music */}
         <button
-          onClick={() => setMobileOpen(true)}
-          className="w-9 h-9 rounded-xl flex items-center justify-center text-text/70 hover:text-text hover:bg-white/10 transition-all duration-150"
-          aria-label="Open menu"
+          onClick={togglePlay}
+          className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 ${
+            playing ? 'bg-white/15' : 'hover:bg-white/10'
+          }`}
+          aria-label="Now playing"
         >
-          <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
-            <line x1="0" y1="1" x2="18" y2="1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-            <line x1="0" y1="7" x2="14" y2="7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-            <line x1="0" y1="13" x2="10" y2="13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-          </svg>
+          <motion.svg
+            width="20" height="20" viewBox="0 0 20 20" fill="none"
+            animate={{ rotate: playing ? 360 : 0 }}
+            transition={playing ? { repeat: Infinity, duration: 3, ease: 'linear' } : { duration: 0.3 }}
+          >
+            <circle cx="10" cy="10" r="9" fill="#1a1a1a" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5"/>
+            <circle cx="10" cy="10" r="7" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
+            <circle cx="10" cy="10" r="5.5" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
+            <circle cx="10" cy="10" r="4" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
+            <circle cx="10" cy="10" r="2.8" fill="#8B3A3A"/>
+            <circle cx="10" cy="10" r="0.8" fill="#1a1a1a"/>
+          </motion.svg>
         </button>
 
-        {/* Work with me */}
+        {/* Hamburger */}
         <button
-          onClick={copyEmail}
-          className="px-4 py-2 rounded-xl text-sm font-[SailecBold] bg-white/10 hover:bg-white/15 text-text transition-all duration-150"
+          onClick={() => setMobileOpen(o => !o)}
+          className="w-9 h-9 rounded-xl flex items-center justify-center bg-accent hover:bg-accent/80 transition-all duration-150"
+          aria-label="Open menu"
         >
-          {emailCopied ? 'Copied!' : 'Work with me'}
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+            <line x1="0" y1="1" x2="16" y2="1" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+            <line x1="0" y1="6" x2="12" y2="6" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+            <line x1="0" y1="11" x2="8" y2="11" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
         </button>
       </div>
 
@@ -424,7 +438,7 @@ export default function Navigation() {
               }}
             >
               {/* Nav links */}
-              <div className="px-2 pb-3">
+              <div className="px-2 pt-2 pb-2">
                 {[
                   { href: '/', label: 'Home' },
                   { href: '/about', label: 'About' },
@@ -434,7 +448,7 @@ export default function Navigation() {
                     key={href}
                     href={href}
                     onClick={() => setMobileOpen(false)}
-                    className={`flex items-center px-3 py-2.5 rounded-lg text-[15px] transition-colors ${
+                    className={`flex items-center px-3 py-2 rounded-lg text-[14px] transition-colors ${
                       pathname === href
                         ? 'text-accent bg-white/[0.06]'
                         : 'text-text/80 hover:text-text hover:bg-white/[0.04]'
@@ -444,14 +458,14 @@ export default function Navigation() {
                   </Link>
                 ))}
 
-                <div className="h-px bg-white/[0.06] mx-3 my-2" />
+                <div className="h-px bg-white/[0.06] mx-3 my-1.5" />
 
                 {caseStudies.map(({ href, label }) => (
                   <Link
                     key={href}
                     href={href}
                     onClick={() => setMobileOpen(false)}
-                    className={`flex items-center px-3 py-2.5 rounded-lg text-[15px] transition-colors ${
+                    className={`flex items-center px-3 py-2 rounded-lg text-[14px] transition-colors ${
                       pathname === href
                         ? 'text-accent bg-white/[0.06]'
                         : 'text-text/60 hover:text-text hover:bg-white/[0.04]'
@@ -461,7 +475,11 @@ export default function Navigation() {
                   </Link>
                 ))}
 
-                <div className="h-px bg-white/[0.06] mx-3 my-2" />
+                <div className="h-px bg-white/[0.06] mx-3 my-1.5" />
+
+                <p className="px-3 pt-1 pb-1.5 text-[10px] uppercase tracking-[0.15em] text-muted/50 font-[SailecBold]">
+                  Work with me
+                </p>
 
                 {workWithMeLinks.map(({ href, label }) => (
                   <a
@@ -470,14 +488,14 @@ export default function Navigation() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center px-3 py-2.5 rounded-lg text-[15px] text-text/60 hover:text-text hover:bg-white/[0.04] transition-colors"
+                    className="flex items-center px-3 py-2 rounded-lg text-[14px] text-text/60 hover:text-text hover:bg-white/[0.04] transition-colors"
                   >
                     {label}
                   </a>
                 ))}
                 <button
                   onClick={() => { copyEmail(); setMobileOpen(false) }}
-                  className="flex items-center w-full px-3 py-2.5 rounded-lg text-[15px] text-text/60 hover:text-text hover:bg-white/[0.04] transition-colors"
+                  className="flex items-center w-full px-3 py-2 rounded-lg text-[14px] text-text/60 hover:text-text hover:bg-white/[0.04] transition-colors"
                 >
                   {emailCopied ? 'Copied!' : 'Email'}
                 </button>
