@@ -20,7 +20,7 @@ const projects = [
     year: '2022–Now',
     title: 'Pan-African Payments Infrastructure',
     outcome: '$9B+ in API-Driven Transactions',
-    image: '/assets/napi.gif',
+    image: '/assets/ChipperCash Cover.png',
   },
   {
     href: '/work/apple-battery',
@@ -29,7 +29,7 @@ const projects = [
     year: '2022–2025',
     title: 'Battery Intelligence Platform for Engineers',
     outcome: '50% Faster Test Setup · Hundreds of Hours Saved',
-    image: '/assets/bdms.webp',
+    image: '/assets/BDMS Cover.png',
   },
   {
     href: '/work/softcom',
