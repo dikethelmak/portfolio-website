@@ -423,15 +423,6 @@ export default function Navigation() {
                 border: '1px solid rgba(255,255,255,0.08)',
               }}
             >
-              {/* Close row */}
-              <button
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center w-full px-5 pt-4 pb-3 text-[10px] uppercase tracking-[0.18em] text-muted/50 font-[SailecBold] hover:text-muted transition-colors"
-              >
-                Close
-              </button>
-              <div className="h-px bg-white/[0.06] mx-5 mb-1" />
-
               {/* Nav links */}
               <div className="px-2 pb-3">
                 {[
