@@ -399,7 +399,8 @@ export default function Navigation() {
         {/* Hamburger */}
         <button
           onClick={() => setMobileOpen(o => !o)}
-          className="w-9 h-9 rounded-xl flex items-center justify-center bg-accent hover:bg-accent/80 transition-all duration-150"
+          className="w-9 h-9 rounded-xl flex items-center justify-center hover:opacity-90 transition-all duration-150"
+          style={{ background: '#1a4fc4' }}
           aria-label="Open menu"
         >
           <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
