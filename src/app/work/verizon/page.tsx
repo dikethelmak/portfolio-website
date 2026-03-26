@@ -52,7 +52,7 @@ function Stat({ value, label }: { value: string; label: string }) {
 
 function RoleCard({ role, description }: { role: string; description: string }) {
   return (
-    <div className="p-5 rounded-2xl border border-white/[0.06] bg-surface/30 flex flex-col gap-2">
+    <div className="p-5 rounded-2xl border border-white/[0.06] bg-surface/30 flex flex-col gap-2 transition-all duration-300 hover:border-accent/30 hover:bg-surface/60 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(61,174,209,0.08)]">
       <p className="text-[13px] font-[SailecBold] text-text">{role}</p>
       <p className="text-[13px] text-muted leading-relaxed">{description}</p>
     </div>
@@ -78,7 +78,7 @@ export default function VerizonPage() {
         </p>
 
         {/* Meta grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           <div>
             <Label>My Role</Label>
             <p className="text-[13px] text-text mt-2">Senior UX Designer</p>
@@ -236,11 +236,11 @@ export default function VerizonPage() {
         Featured at GTC 2025 in a Verizon/Monks speaker session. Live demoed at NAB 2025 with Haivision and FanDuel.
       </Callout>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-0 mt-10 mb-10">
-        <Stat value="3" label="Roles shipped and validated across a 5-node production cluster" />
-        <Stat value="100%" label="Org isolation confirmed in QA — zero cross-tenant data leakage" />
-        <Stat value="4ms" label="Zero cloud dependency, fully cluster-local auth at 4ms latency" />
-        <Stat value="∞" label="Scalable multi-tenancy — any number of orgs per cluster" />
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 mt-10 mb-10">
+        <Stat value="3" label="Roles shipped across a 5-node production cluster" />
+        <Stat value="100%" label="Org isolation — zero cross-tenant data leakage" />
+        <Stat value="4ms" label="Cluster-local auth, no cloud dependency" />
+        <Stat value="∞" label="Orgs per cluster, infinitely scalable" />
       </div>
 
     </div>

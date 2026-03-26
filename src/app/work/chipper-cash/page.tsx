@@ -62,18 +62,19 @@ export default function ChipperCashPage() {
         </p>
 
         {/* Meta grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           <div>
             <Label>My Role</Label>
             <p className="text-[13px] text-text mt-2">Senior Product Designer</p>
+            <p className="text-[12px] text-muted mt-1">0 → 1</p>
           </div>
           <div>
             <Label>Deliverables</Label>
-            <p className="text-[13px] text-text mt-2">Merchant API · KYC Flow · USD Accounts</p>
+            <p className="text-[13px] text-text mt-2">KYC Flow · Merchant API · USD Accounts</p>
           </div>
           <div>
             <Label>Outcome</Label>
-            <p className="text-[13px] text-text mt-2">$9B+ in transactions · $800K saved</p>
+            <p className="text-[13px] text-text mt-2">$9B+ transactions · $800K saved · 31K+ USD accounts</p>
           </div>
           <div>
             <Label>Team</Label>
@@ -84,84 +85,115 @@ export default function ChipperCashPage() {
         </div>
       </div>
 
-      <ProjectImage src="/assets/napi.gif" alt="Merchant API Dashboard" />
+      <ProjectImage src="/assets/ChipperCash Cover.png" alt="Chipper Cash" />
 
-      {/* Merchant API */}
-      <SectionTitle>Merchant API Dashboard</SectionTitle>
+      {/* What I Did */}
+      <SectionTitle>What I Did</SectionTitle>
 
-      <div className="flex flex-col gap-5 text-[15px] text-muted leading-[1.85] max-w-2xl">
+      <h3 className="text-[17px] font-[SailecBold] text-text mb-6">
+        KYC Flow Redesign
+      </h3>
+
+      <div className="flex flex-col gap-5 text-[15px] text-muted leading-[1.85] max-w-2xl mb-10">
         <p>
-          When merchants were integrating with our API, they relied solely on the sales team to
-          onboard, generate API keys, and view transactions. This not only slowed down growth and
-          overwhelmed the sales team, it made it difficult to onboard high-value merchants faster.
+          Our KYC system had three structural problems: a $800K/year third-party vendor we had
+          no control over, a six-step onboarding flow that hadn&apos;t kept pace with regulatory
+          changes across Nigeria, Ghana, and Rwanda, and a USD card activation path that was
+          passive and buried.
         </p>
         <p>
-          I designed and launched a self-serve dashboard that gave merchants full control to
-          generate keys, monitor transactions, and manage accounts with little or no human
-          intervention. This reduced the sales team&apos;s workload, reduced onboarding time, and
-          helped power over $9B in API-driven transactions to date.
+          Over three phases, I led the design of an in-house verification system to replace the
+          vendor, collapsed the flow from six steps to two by aligning with updated country
+          databases, and introduced itemized onboarding with contextual card activation prompts
+          at the highest-intent moment in the user journey.
         </p>
       </div>
 
       <PullQuote>
-        Reduced the sales team&apos;s workload and helped power over $9B in API-driven transactions.
+        The result: $800K saved annually, average onboarding time down 97% — from 4.5 hours
+        in January to under 8 minutes by March — with 98% of users completing in under 5
+        minutes. A compliance hurdle converted into an active conversion path for
+        Chipper&apos;s most valuable product.
       </PullQuote>
 
-      <div className="mt-2">
-        <ArrowLink href="https://www.chippercash.com/api" external>
-          API Website
-        </ArrowLink>
+      <div className="rounded-xl overflow-hidden mb-3">
+        <video
+          src="/assets/ChipperCash Onboarding.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls
+          className="w-full"
+        />
       </div>
+      <p className="text-[11px] uppercase tracking-[0.14em] text-muted/50 font-[SailecBold] mb-16">
+        New Onboarding Flow
+      </p>
 
-      {/* KYC */}
-      <SectionTitle>KYC Flow Redesign</SectionTitle>
+      {/* Merchant API */}
+      <h3 className="text-[17px] font-[SailecBold] text-text mb-6 pt-10">
+        Merchant API Dashboard
+      </h3>
 
-      <div className="flex flex-col gap-5 text-[15px] text-muted leading-[1.85] max-w-2xl mb-10">
+      <div className="flex flex-col gap-5 text-[15px] text-muted leading-[1.85] max-w-2xl">
         <p>
-          When we needed to streamline vendor costs, I led two critical redesigns of Chipper
-          Cash&apos;s KYC flow. First, replacing our third-party Veriface vendor with an in-house
-          facial recognition model, saving the company over $800K annually.
+          Merchants integrating with the API had no self-service path — every step relied on the
+          sales team to onboard, generate API keys, and pull transaction data. This created a
+          bottleneck that slowed growth and made it harder to scale high-value merchant relationships.
         </p>
         <p>
-          And much later, I optimized the entire flow for speed and clarity across markets,
-          resulting in a 2% uplift in verification completion. Together, these efforts streamlined
-          onboarding, saved costs, and reduced drop-off rates.
+          I led the design of a self-serve dashboard giving merchants full control: generate API
+          keys, monitor and categorise transactions, export data, manage refunds, and view
+          balances in relevant currencies — with no sales team involvement required.
+        </p>
+        <p>
+          The dashboard launched among merchants, sales team dependency dropped noticeably and
+          the API has since powered $9B+ in transaction volume across markets.
         </p>
       </div>
 
-      <ProjectImage src="/assets/beforexafter2.png" alt="KYC Redesign — Before" />
-
-      <div className="mb-16">
-        <ProjectImage src="/assets/beforexafter1.png" alt="KYC Redesign — After" />
+      <div className="flex flex-col gap-6 mt-10 mb-4">
+        <ProjectImage src="/assets/Chipper Merchant1.png" alt="Chipper Merchant Dashboard" />
       </div>
 
-      <div className="mt-2">
-        <ArrowLink
-          href="https://www.chippercash.com/blog/how-ai-is-revolutionizing-the-tech-industry-in-africa"
-          external
-        >
-          How We Did It
-        </ArrowLink>
+      <PullQuote>
+        $9B+ in API-driven transactions.
+      </PullQuote>
+
+      <div className="flex flex-col gap-6 mt-6 mb-4">
+        <ProjectImage src="/assets/Chipper Merchant2.png" alt="Chipper Merchant Dashboard" />
+        <ProjectImage src="/assets/Chipper Merchant3.png" alt="Chipper Merchant Dashboard" />
       </div>
 
       {/* USD Virtual Accounts */}
-      <SectionTitle>USD Virtual Accounts</SectionTitle>
+      <h3 className="text-[17px] font-[SailecBold] text-text mb-6 pt-10">
+        USD Virtual Accounts
+      </h3>
 
-      <div className="flex flex-col gap-5 text-[15px] text-muted leading-[1.85] max-w-2xl mb-10">
+      <div className="flex flex-col gap-5 text-[15px] text-muted leading-[1.85] max-w-2xl">
         <p>
-          Millions of Nigerians lack easy access to receive international payments. The USD Virtual
-          Account gives users U.S. bank details and the ability to receive money globally in USD.
+          For millions of Africans — freelancers, creators, remote workers — receiving
+          international payments meant navigating fragmented systems, steep fees, or no
+          viable path at all. Access to U.S. banking infrastructure was the gap.
         </p>
         <p>
-          I led the design of this cross-border feature, factoring in the regulatory requirements
-          of the country and our business partners. This has helped Chipper reposition as a
-          platform for freelancers and creators, not just peer-to-peer transfers.
+          I led the design of Chipper&apos;s USD Virtual Account feature: a product that gives
+          users real U.S. bank details to receive payments globally in dollars. The design
+          required navigating regulatory requirements across markets and coordinating closely
+          with business and compliance partners to ship something that was both viable and
+          frictionless.
         </p>
         <p>
-          Since launch, we&apos;ve issued over 15,000 USD accounts, processed 20,000 payment links
-          and $5M+ in transactions.
+          The feature helped reposition Chipper beyond peer-to-peer transfers — into a
+          platform for the African creator and freelancer economy.
         </p>
       </div>
+
+      <PullQuote>
+        31,977 USD virtual accounts issued. $11M+ in total deposits across two provider
+        integrations since launch.
+      </PullQuote>
 
       <div className="mb-16">
         <ProjectImage src="/assets/usd va.gif" alt="USD Virtual Accounts" />
@@ -174,10 +206,11 @@ export default function ChipperCashPage() {
         Media Release
       </ArrowLink>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-0 mt-16 mb-10">
-        <Stat value="$9B+" label="In API-driven transactions powered by the self-serve Merchant Dashboard" />
-        <Stat value="$800K" label="Saved annually by replacing the third-party KYC vendor with in-house AI" />
-        <Stat value="15K+" label="USD virtual accounts issued since launch, with $5M+ in transactions" />
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 mt-16 mb-10">
+        <Stat value="$9B+" label="API-driven transactions to date" />
+        <Stat value="$800K" label="Saved annually in KYC vendor costs" />
+        <Stat value="97%" label="Reduction in average onboarding time" />
+        <Stat value="31K+" label="USD virtual accounts issued · $11M+ in deposits" />
       </div>
 
     </div>

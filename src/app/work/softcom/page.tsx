@@ -63,7 +63,7 @@ export default function SoftcomPage() {
         </p>
 
         {/* Meta grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           <div>
             <Label>My Role</Label>
             <p className="text-[13px] text-text mt-2">Lead Product Designer</p>
@@ -199,7 +199,7 @@ export default function SoftcomPage() {
         <ProjectImage src="/assets/useforms3.png" alt="Useforms Learnings" />
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-0 mt-10 mb-10">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 mt-10 mb-10">
         <Stat value="500K+" label="Lives impacted by Softcom&apos;s platform portfolio" />
         <Stat value="3" label="Surfaces shipped — web app, mobile app, and field agent app" />
         <Stat value="0→1" label="Full product design lifecycle, from discovery through usability testing" />

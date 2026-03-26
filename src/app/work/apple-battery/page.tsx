@@ -62,7 +62,7 @@ export default function AppleBatteryPage() {
         </p>
 
         {/* Meta grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
           <div>
             <Label>My Role</Label>
             <p className="text-[13px] text-text mt-2">Lead UX Designer</p>
@@ -84,7 +84,7 @@ export default function AppleBatteryPage() {
         </div>
       </div>
 
-      <ProjectImage src="/assets/bdms.webp" alt="Battery Intelligence Dashboard" />
+      <ProjectImage src="/assets/BDMS Cover.png" alt="Battery Intelligence Dashboard" />
 
       {/* Challenge */}
       <SectionTitle>The Challenge</SectionTitle>
@@ -133,7 +133,7 @@ export default function AppleBatteryPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-0 mt-10 mb-10">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 mt-10 mb-10">
         <Stat value="50%" label="Reduction in battery test setup time after cloning interface redesign" />
         <Stat value="3yr" label="Long-term solo design engagement — sole designer across the full project" />
         <Stat value="100s" label="Engineering hours saved annually across the BDMS platform" />
