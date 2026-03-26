@@ -345,25 +345,52 @@ export default function Navigation() {
       </nav>
 
       {/* ── Mobile bottom nav ─────────────────────────────────────────────── */}
-      <div className="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 px-2 py-2 rounded-full shadow-2xl"
+      <div
+        className="md:hidden fixed bottom-4 left-4 right-4 z-50 flex items-center gap-3 px-3 py-2.5 rounded-2xl shadow-2xl"
         style={{
-          background: 'rgba(13, 37, 53, 0.85)',
-          backdropFilter: 'blur(20px)',
+          background: 'rgba(13, 37, 53, 0.92)',
+          backdropFilter: 'blur(24px)',
           border: '1px solid rgba(255,255,255,0.08)',
         }}
       >
-        <Link href="/" className="w-9 h-9 rounded-full overflow-hidden shrink-0 ring-2 ring-white/10">
-          <Image src="/assets/aboutme-main.png" alt="Thelma Dike" width={36} height={36} className="w-full h-full object-cover object-top" />
+        {/* Avatar */}
+        <Link
+          href="/"
+          className={`w-9 h-9 rounded-full overflow-hidden shrink-0 ring-2 transition-all duration-200 ${
+            pathname === '/' ? 'ring-accent/60' : 'ring-white/10'
+          }`}
+        >
+          <Image
+            src="/assets/aboutme-main.png"
+            alt="Thelma Dike"
+            width={36}
+            height={36}
+            className={`w-full h-full object-cover object-top transition-all duration-200 ${
+              pathname === '/' ? 'grayscale-0' : 'grayscale'
+            }`}
+          />
         </Link>
+
+        {/* Spacer */}
+        <div className="flex-1" />
+
+        {/* Hamburger */}
         <button
           onClick={() => setMobileOpen(true)}
-          className="px-4 py-2 text-sm text-text/75 hover:text-text transition-colors"
+          className="w-9 h-9 rounded-xl flex items-center justify-center text-text/70 hover:text-text hover:bg-white/10 transition-all duration-150"
+          aria-label="Open menu"
         >
-          Menu
+          <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+            <line x1="0" y1="1" x2="18" y2="1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            <line x1="0" y1="7" x2="14" y2="7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            <line x1="0" y1="13" x2="10" y2="13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+          </svg>
         </button>
+
+        {/* Work with me */}
         <button
-          onClick={() => { copyEmail() }}
-          className="px-4 py-2 rounded-full text-sm font-[SailecBold] bg-white/10 text-text"
+          onClick={copyEmail}
+          className="px-4 py-2 rounded-xl text-sm font-[SailecBold] bg-white/10 hover:bg-white/15 text-text transition-all duration-150"
         >
           {emailCopied ? 'Copied!' : 'Work with me'}
         </button>
@@ -394,7 +421,11 @@ export default function Navigation() {
                   </div>
                   <span className="text-sm font-[SailecBold] text-text">Thelma Dike</span>
                 </div>
-                <button onClick={() => setMobileOpen(false)} className="text-2xl text-text/60 hover:text-text leading-none" aria-label="Close menu">×</button>
+                <button onClick={() => setMobileOpen(false)} className="w-9 h-9 rounded-xl flex items-center justify-center text-text/60 hover:text-text hover:bg-white/10 transition-all duration-150" aria-label="Close menu">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                </button>
               </div>
 
               <div className="flex flex-col gap-1 mb-6">
