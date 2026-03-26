@@ -94,7 +94,20 @@ export default function HeroSection() {
         className="flex flex-col gap-4 text-[15px] text-muted leading-[1.75] max-w-3xl mb-10"
       >
         <p>
-          I&apos;m Thelma, a product designer with 8 years of experience. I specialise in
+          I&apos;m{' '}
+          <span className="relative inline-block group/thelma">
+            <span className="text-accent cursor-default transition-colors duration-200">
+              Thelma
+            </span>
+            <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-[100px] opacity-0 group-hover/thelma:opacity-100 transition-opacity duration-200 z-10">
+              <img
+                src="/assets/aboutme-main.png"
+                alt="Thelma Dike"
+                className="w-[100px] h-[100px] rounded-2xl object-cover object-top shadow-xl border border-white/10"
+              />
+            </span>
+          </span>
+          , a product designer with 8 years of experience. I specialise in
           complex, regulated systems that help expert users move fast without breaking things.
         </p>
         <p>
@@ -103,7 +116,23 @@ export default function HeroSection() {
           across 4 African markets.
         </p>
         <p>
-          Outside my role at ChipperCash, I&apos;m building{' '}
+          Outside my role at{' '}
+          <span className="relative inline-block group/chipper">
+            <a
+              href="https://chippercash.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:text-bright transition-colors underline underline-offset-2"
+            >
+              ChipperCash
+            </a>
+            <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2.5 w-64 rounded-xl px-3.5 py-2.5 text-[12px] leading-relaxed text-text/90 opacity-0 group-hover/chipper:opacity-100 transition-opacity duration-200 shadow-xl z-10"
+              style={{ background: 'rgba(13,37,53,0.97)', border: '1px solid rgba(255,255,255,0.08)' }}
+            >
+              Pan-African payments infrastructure — I led B2B API, merchant tooling, and onboarding optimisation UX processing $9B+ across 4 African markets.
+            </span>
+          </span>
+          , I&apos;m building{' '}
           <span className="relative inline-block group/tooltip">
             <a
               href="https://verifyskn.vercel.app"
