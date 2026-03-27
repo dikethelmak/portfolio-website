@@ -233,7 +233,16 @@ export default function VerizonPage() {
         <img src="/assets/NvidiaGTCLogo.jpg" alt="NVIDIA GTC" className="h-10 w-auto rounded-md" />
       </div>
       <Callout>
-        Featured at GTC 2025 in a Verizon/Monks speaker session. Live demoed at NAB 2025 with Haivision and FanDuel.
+        Featured at{' '}
+        <a
+          href="https://www.nvidia.com/en-us/on-demand/session/gtc25-s72513/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:text-bright transition-colors underline underline-offset-2"
+        >
+          GTC 2025
+        </a>
+        {' '}in a Verizon/Monks speaker session. Live demoed at NAB 2025 with Haivision and FanDuel.
       </Callout>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 mt-10 mb-10">
