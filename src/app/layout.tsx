@@ -6,7 +6,7 @@ import CustomCursor from '@/components/CustomCursor'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Thelma Dike — Product Designer',
+  title: 'Thelma Dike | Designer, Builder, Operator',
   description:
     'Thelma Dike — Senior Product Designer with 8 years of experience. Design Leader, Operator, Builder. Portfolio of work across FinTech, HealthTech, and enterprise tools.',
   icons: { icon: '/assets/favicon.svg' },

@@ -150,7 +150,7 @@ export default function SoftcomPage() {
         large volumes of ongoing data collection.
       </p>
 
-      <CaseVideo src="/assets/Workspaces%26folders\.mp4" label="Creating workspaces and folders" />
+      <CaseVideo src="/assets/workspaces-folders.mp4" label="Creating workspaces and folders" />
 
       {/* Form Cards */}
       <h3 className="text-[17px] font-[SailecBold] text-text mb-6">
@@ -178,7 +178,7 @@ export default function SoftcomPage() {
         enough for complex research instruments without adding unnecessary complexity.
       </p>
 
-      <CaseVideo src="/assets/Form%20Builder\.mp4" label="Creating a form" />
+      <CaseVideo src="/assets/form-builder.mp4" label="Creating a form" />
 
       {/* Templates */}
       <h3 className="text-[17px] font-[SailecBold] text-text mb-6">
@@ -191,7 +191,7 @@ export default function SoftcomPage() {
         helping teams move faster on recurring research tasks.
       </p>
 
-      <CaseVideo src="/assets/Templates\.mp4" label="Creating a form using an existing template" />
+      <CaseVideo src="/assets/templates.mp4" label="Creating a form using an existing template" />
 
       {/* Share Form */}
       <h3 className="text-[17px] font-[SailecBold] text-text mb-6">
@@ -205,7 +205,7 @@ export default function SoftcomPage() {
         helping teams collect and compare data over time without duplicating setup work.
       </p>
 
-      <CaseVideo src="/assets/Share%20Form\.mp4" label="Sharing a form" />
+      <CaseVideo src="/assets/share-form.mp4" label="Sharing a form" />
 
       {/* Response Management */}
       <h3 className="text-[17px] font-[SailecBold] text-text mb-6">
@@ -218,7 +218,7 @@ export default function SoftcomPage() {
         analytics tools like Power BI and Google Sheets for deeper analysis.
       </p>
 
-      <CaseVideo src="/assets/Results\.mp4" label="Viewing responses and downloading them" />
+      <CaseVideo src="/assets/results.mp4" label="Viewing responses and downloading them" />
 
       {/* Result */}
       <SectionTitle>The Result</SectionTitle>
